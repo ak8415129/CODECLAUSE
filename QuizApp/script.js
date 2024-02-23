@@ -9,7 +9,7 @@ const questions=[
         ]
     }, 
     {
-        question:"2which is the largest animal in the world?",
+        question:"22222which is the largest animal in the world?",
         answer:[
             {text:"Shark" ,correct:false},
             {text:"Blue Whale" ,correct:true},
@@ -18,7 +18,7 @@ const questions=[
         ]
     }, 
     {
-        question:"3which is the largest animal in the world?",
+        question:"33333which is the largest animal in the world?",
         answer:[
             {text:"Shark" ,correct:false},
             {text:"Blue Whale" ,correct:true},
@@ -27,7 +27,7 @@ const questions=[
         ]
     }, 
     {
-        question:"4which is the largest animal in the world?",
+        question:"44444which is the largest animal in the world?",
         answer:[
             {text:"Shark" ,correct:false},
             {text:"Blue Whale" ,correct:true},
@@ -58,7 +58,7 @@ function showQuestion()
     resetState();
     let currentQuestion=questions[currentQuestionIndex]; 
     let questionNo=currentQuestionIndex+1;
-    questionElement.innerHTML=questionNo+". "+currentQuestion.question; 
+    questionElement.innerHTML=questionNo+"."+currentQuestion.question; 
 
     currentQuestion.answer.forEach(answer=>{
         const button=document.createElement("button");
@@ -96,8 +96,42 @@ function selectAnswer(e)
     else{
         selectedBtn.classList.add("incorrect");
     }  
-    currentQuestionIndex=currentQuestionIndex+1;
-    resetState();
+   Array.from(answerButton.children).forEach(button=>{
     
+    if(button.dataset.correct=="true")
+    {
+        button.classList.add("correct");
+    }
+     button.disabled=true;
+   });
+    nextButton.style.display="block";
+} 
+  function showScore(){
+    resetState();
+    questionElement.innerHTML=`You Score: ${score} out of ${questions.length} !`; 
+
+    nextButton.innerHTML="Play Again" ;
+    nextButton.style.display="block";
+
+  }
+
+function handleNextButton(){
+    currentQuestionIndex++;
+    if(currentQuestionIndex<questions.length)
+    {
+        showQuestion();
+    } 
+    else{
+        showScore();
+    }
 }
+nextButton.addEventListener("click",()=>{
+    if(currentQuestionIndex<questions.length)
+    {
+      handleNextButton();
+    } 
+    else{
+        startQuiz();
+    }
+})
 startQuiz();
