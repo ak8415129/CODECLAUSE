@@ -1,38 +1,38 @@
 const questions=[
     {
-        question:"which is the largest animal in the world?",
+        question:"Who is the father of C language ?",
         answer:[
-            {text:"Shark" ,correct:false},
-            {text:"Blue Whale" ,correct:true},
-            {text:"Elephant" ,correct:false},
-            {text:"Giraffe" ,correct:false},
+            {text:"Steve Jobs" ,correct:false},
+            {text:"Dennis Ritchie" ,correct:true},
+            {text:"Elon Musk" ,correct:false},
+            {text:"John Taitor" ,correct:false},
         ]
     }, 
     {
-        question:"22222which is the largest animal in the world?",
+        question:"Which of the following cannot be a variable name in C",
         answer:[
-            {text:"Shark" ,correct:false},
-            {text:"Blue Whale" ,correct:true},
+            {text:"volatile" ,correct:true},
+            {text:"true" ,correct:false},
             {text:"Elephant" ,correct:false},
-            {text:"Giraffe" ,correct:false},
+            {text:"friend" ,correct:false},
         ]
     }, 
     {
-        question:"33333which is the largest animal in the world?",
+        question:"What is an example of iteration in C?",
         answer:[
-            {text:"Shark" ,correct:false},
-            {text:"Blue Whale" ,correct:true},
-            {text:"Elephant" ,correct:false},
-            {text:"Giraffe" ,correct:false},
+            {text:"for" ,correct:false},
+            {text:"while" ,correct:false},
+            {text:"do-while" ,correct:false},
+            {text:"All" ,correct:true},
         ]
     }, 
     {
-        question:"44444which is the largest animal in the world?",
+        question:"Which of the following is not a type of constructor?",
         answer:[
-            {text:"Shark" ,correct:false},
-            {text:"Blue Whale" ,correct:true},
-            {text:"Elephant" ,correct:false},
-            {text:"Giraffe" ,correct:false},
+            {text:"Copy" ,correct:false},
+            {text:"Parameterised" ,correct:false},
+            {text:"Friend" ,correct:true},
+            {text:"Default" ,correct:false},
         ]
     },
 
